@@ -1,0 +1,61 @@
+{
+  "teams": [
+    {
+      "id":  "1",
+      "name":"Category 1",
+      "roster": [
+        {
+          "id": 1,
+          "unit": "Apple",
+          "done": true
+        },
+        {
+          "id": 2,
+          "unit": "Banana",
+          "done": false
+        },
+        {
+          "id": 3,
+          "unit": "Strawberry",
+          "done": false
+        },
+        {
+          "id": 4,
+          "unit": "Watermalon",
+          "done": false
+        },
+        {
+          "id": 5,
+          "unit": "Jackfruit",
+          "done": true
+        },
+        {
+          "id": 6,
+          "unit": "Pinaple",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id":  "2",
+      "name":"Category 2",
+      "roster": [
+        {
+          "id": 1,
+          "unit": "Potato",
+          "done": false
+        },
+        {
+          "id": 2,
+          "unit": "Carrot",
+          "done": false
+        },
+        {
+          "id": 3,
+          "unit": "Eggplant",
+          "done": false
+        }
+      ]
+    }
+  ]
+}

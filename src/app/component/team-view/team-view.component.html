@@ -1,0 +1,22 @@
+<section class="main">
+  <ul class="todo-list">
+    <h2>{{labels.teamNameHeader}}</h2>
+    <li *ngFor = "let teamData of jsonTeamData.teams; ">
+      <div class="view">
+
+        <label (click) = "rosterView(teamData)">{{teamData.name}}</label>
+      </div>
+    </li>
+    <div  *ngIf="teamData">
+      <h3>{{labels.displayName}}</h3>
+      <div class="view" *ngFor = "let roster of teamData.roster let i = index">
+        <input type="checkbox" id = "itemCheckBox_{{i}}" [checked]="roster.done" (click)="itemChecked(roster.id)" ><label class="{{roster.done == 1 ? 'fontChange' : ''}}" id="item_{{i}}">{{roster.unit}}</label>
+        <!--<input *ngIf="!roster.done" type="checkbox" id = "itemCheckBox_{{i}}" (click)="itemChecked(roster.id)" ><label id="item_{{i}}">{{roster.unit}}</label>-->
+      </div>
+
+      <input class="new-todo" placeholder="Add New Item" autofocus="" (keyup.enter)="addItem()" [(ngModel)] = "itemName"> Press Enter to Add item
+    </div>
+  </ul>
+</section>
+
+<input class="new-todo" placeholder="Add New Category" autofocus="" (keyup.enter)="addCategory()" [(ngModel)] = "categoryName"> Press Enter to Add item
